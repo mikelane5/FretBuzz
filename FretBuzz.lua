@@ -24,7 +24,7 @@ local Tracks = require('Tracks')
 
 -- Main GUI loop
 local function loop()
-    ImGui.SetNextWindowSize(ctx, 704, 650, ImGui.Cond_Always)
+    ImGui.SetNextWindowSize(ctx, 704, 620, ImGui.Cond_Always)
     local visible, open = ImGui.Begin(ctx, 'FretBuzz', true)
     
     if visible then
