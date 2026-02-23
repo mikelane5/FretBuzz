@@ -36,7 +36,7 @@ Click the Clear Markers button to remove the section markers.
 
 ## **Right Hand Strum Maps for Bass Guitar**  
 
-The Strum map buttons are for the PART BASS track only. The place text messages that define the right hand animation for the bass player. 
+The Strum map buttons are for the PART BASS track only. They place text messages that define the right hand animation for the bass player. 
 
 <img width="490" height="83" alt="strum-maps-bass" src="https://github.com/user-attachments/assets/ee7385df-9556-4c8f-a083-f10fd14cd758" />
 
