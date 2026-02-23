@@ -41,9 +41,9 @@ The Strum map buttons are for the PART BASS track only. They place text messages
 <img width="490" height="83" alt="strum-maps-bass" src="https://github.com/user-attachments/assets/ee7385df-9556-4c8f-a083-f10fd14cd758" />
 
 ## Installation
-**Note**: EVENT Tools reqiures a modern version of Reaper to run. 
+**Note**: This app reqiures a modern version of Reaper to run. 
 
-Download and extract files to your Reaper Scripts folder (C:\Users\<username>\AppData\Roaming\REAPER\Scripts\EventsTools).
+Download and extract files to your Reaper Scripts folder (C:\Users\<username>\AppData\Roaming\REAPER\Scripts\FretBuzz).
 
 **Note**: You need to have hidden items enabled in **File Explorer** to access the AppData folder. In File Explorer click **View** > **Show** > **Hidden Items**. 
 
@@ -57,14 +57,12 @@ In the **Actions** window Click the **New action** button, then click **Load Rea
 
 Browse to C:\Users\<username>\AppData\Roaming\REAPER\Scripts\FretBuzz. Select **Events Toola.lua** and then click the **Open** button.
 
-In the **Actions** window, select **Script: Events Tools.lua** from the list. Click the **Add** button. The **Keyboard/MIDI/OSC Input** window will open. Choose a hotkey for the application. I use the **F12** key. Click the **OK** button.
+In the **Actions** window, select **Script: Events Tools.lua** from the list. Click the **Add** button. The **Keyboard/MIDI/OSC Input** window will open. Choose a hotkey for the application.
 
 <img width="924" height="436" alt="Reaper-hotkey-setup" src="https://github.com/user-attachments/assets/0ff3ac7e-df30-465d-9c9b-67258ff5263d" />
 
 Click the **Close** button in the **Actions** window.
 
-Installation is now complete. 
-
-Launch EVENT Tools by pressing the **F12** key.
+Installation is now complete.
 
 
