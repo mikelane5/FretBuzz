@@ -2,7 +2,7 @@
 
 Fretbuzz adds MIDI notes and text events to PART GUITAR and BASS tracks in Reaper. All notes and text events are placed at the current playhead position.
 
-<img width="704" height="650" alt="Fretbuzz" src="https://github.com/user-attachments/assets/55f6cc41-fe3e-4c19-896c-d0dd13a64c97" />
+<img width="764" height="692" alt="Fretbuzz" src="https://github.com/user-attachments/assets/6e0e7a08-ce29-4e24-87b0-0a2fd19a1034" />
 
 ## **Requirements**  
 The simplest way to get scripts working in Reaper is to follow the Milohax Reaper setup guide here: https://guides.milohax.org/en/charting/reaper/. This guide includes installing the SWS Extensions and includes the other files that you need.
@@ -39,6 +39,12 @@ Click the Clear Markers button to remove the section markers.
 The Strum map buttons are for the PART BASS track only. They place text messages that define the right hand animation for the bass player. 
 
 <img width="490" height="83" alt="strum-maps-bass" src="https://github.com/user-attachments/assets/ee7385df-9556-4c8f-a083-f10fd14cd758" />
+
+## **Character Animations**
+
+These buttons add text events for character animation, and can be used to refinne the initial character animation text events that are placed by CAT (Create animation events button).
+
+<img width="765" height="69" alt="Character Animations" src="https://github.com/user-attachments/assets/1dc85dce-2bf7-42e5-b992-81f308907bd0" />
 
 ## Installation
 **Note**: This app reqiures a modern version of Reaper to run. 
