@@ -1,4 +1,4 @@
-## **Fretbuzz**
+## **Fretbuzz 1.1**
 
 Fretbuzz adds MIDI notes and text events to PART GUITAR and BASS tracks in Reaper. All notes and text events are placed at the current playhead position.
 
