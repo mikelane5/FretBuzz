@@ -24,7 +24,7 @@ local Tracks = require('Tracks')
 
 -- Main GUI loop
 local function loop()
-    ImGui.SetNextWindowSize(ctx, 704, 620, ImGui.Cond_Always)
+    ImGui.SetNextWindowSize(ctx, 704, 620, ImGui.Cond_FirstUseEver)
     local visible, open = ImGui.Begin(ctx, 'FretBuzz', true)
     
     if visible then
@@ -256,6 +256,46 @@ local function loop()
         
         if ImGui.Button(ctx, 'Slap', 150, 40) then
             Buttons.StrumMap_Slap()
+        end
+        
+        -- Separator
+        ImGui.Separator(ctx)
+        ImGui.Spacing(ctx)
+        ImGui.Text(ctx, 'Character Animations')
+        
+        -- Character Animation Buttons
+        if ImGui.Button(ctx, 'Idle Realtime', 100, 40) then
+            Buttons.CharAnim_IdleRealtime()
+        end
+        ImGui.SameLine(ctx)
+        
+        if ImGui.Button(ctx, 'Idle', 100, 40) then
+            Buttons.CharAnim_Idle()
+        end
+        ImGui.SameLine(ctx)
+        
+        if ImGui.Button(ctx, 'Idle Intense', 100, 40) then
+            Buttons.CharAnim_IdleIntense()
+        end
+        ImGui.SameLine(ctx)
+        
+        if ImGui.Button(ctx, 'Play', 100, 40) then
+            Buttons.CharAnim_Play()
+        end
+        ImGui.SameLine(ctx)
+        
+        if ImGui.Button(ctx, 'Mellow', 100, 40) then
+            Buttons.CharAnim_Mellow()
+        end
+        ImGui.SameLine(ctx)
+        
+        if ImGui.Button(ctx, 'Intense', 100, 40) then
+            Buttons.CharAnim_Intense()
+        end
+        ImGui.SameLine(ctx)
+        
+        if ImGui.Button(ctx, 'Play Solo', 100, 40) then
+            Buttons.CharAnim_PlaySolo()
         end
         
         ImGui.End(ctx)

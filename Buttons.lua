@@ -248,4 +248,146 @@ function Buttons.ClearMarkers()
     reaper.Undo_EndBlock("Clear Markers", -1)
 end
 
+-- Character Animation Button Functions
+
+function Buttons.CharAnim_IdleRealtime()
+    local track, take = Tracks.GetActiveMIDITrack()
+    
+    if not track or not take then
+        reaper.ShowMessageBox("No active MIDI editor or track!", "Error", 0)
+        return
+    end
+    
+    local trackName = Tracks.GetTrackName(track)
+    
+    if not Tracks.IsTrackInGroup(trackName, "GUITARS") then
+        reaper.ShowMessageBox("Character animations only work on GUITARS tracks!\n(PART BASS, PART GUITAR, PART RHYTHM)", "Error", 0)
+        return
+    end
+    
+    reaper.Undo_BeginBlock()
+    MIDIFunctions.AddTextEvent(track, "[idle_realtime]")
+    reaper.Undo_EndBlock("Add Character Animation: Idle Realtime", -1)
+end
+
+function Buttons.CharAnim_Idle()
+    local track, take = Tracks.GetActiveMIDITrack()
+    
+    if not track or not take then
+        reaper.ShowMessageBox("No active MIDI editor or track!", "Error", 0)
+        return
+    end
+    
+    local trackName = Tracks.GetTrackName(track)
+    
+    if not Tracks.IsTrackInGroup(trackName, "GUITARS") then
+        reaper.ShowMessageBox("Character animations only work on GUITARS tracks!\n(PART BASS, PART GUITAR, PART RHYTHM)", "Error", 0)
+        return
+    end
+    
+    reaper.Undo_BeginBlock()
+    MIDIFunctions.AddTextEvent(track, "[idle]")
+    reaper.Undo_EndBlock("Add Character Animation: Idle", -1)
+end
+
+function Buttons.CharAnim_IdleIntense()
+    local track, take = Tracks.GetActiveMIDITrack()
+    
+    if not track or not take then
+        reaper.ShowMessageBox("No active MIDI editor or track!", "Error", 0)
+        return
+    end
+    
+    local trackName = Tracks.GetTrackName(track)
+    
+    if not Tracks.IsTrackInGroup(trackName, "GUITARS") then
+        reaper.ShowMessageBox("Character animations only work on GUITARS tracks!\n(PART BASS, PART GUITAR, PART RHYTHM)", "Error", 0)
+        return
+    end
+    
+    reaper.Undo_BeginBlock()
+    MIDIFunctions.AddTextEvent(track, "[idle_intense]")
+    reaper.Undo_EndBlock("Add Character Animation: Idle Intense", -1)
+end
+
+function Buttons.CharAnim_Play()
+    local track, take = Tracks.GetActiveMIDITrack()
+    
+    if not track or not take then
+        reaper.ShowMessageBox("No active MIDI editor or track!", "Error", 0)
+        return
+    end
+    
+    local trackName = Tracks.GetTrackName(track)
+    
+    if not Tracks.IsTrackInGroup(trackName, "GUITARS") then
+        reaper.ShowMessageBox("Character animations only work on GUITARS tracks!\n(PART BASS, PART GUITAR, PART RHYTHM)", "Error", 0)
+        return
+    end
+    
+    reaper.Undo_BeginBlock()
+    MIDIFunctions.AddTextEvent(track, "[play]")
+    reaper.Undo_EndBlock("Add Character Animation: Play", -1)
+end
+
+function Buttons.CharAnim_Mellow()
+    local track, take = Tracks.GetActiveMIDITrack()
+    
+    if not track or not take then
+        reaper.ShowMessageBox("No active MIDI editor or track!", "Error", 0)
+        return
+    end
+    
+    local trackName = Tracks.GetTrackName(track)
+    
+    if not Tracks.IsTrackInGroup(trackName, "GUITARS") then
+        reaper.ShowMessageBox("Character animations only work on GUITARS tracks!\n(PART BASS, PART GUITAR, PART RHYTHM)", "Error", 0)
+        return
+    end
+    
+    reaper.Undo_BeginBlock()
+    MIDIFunctions.AddTextEvent(track, "[mellow]")
+    reaper.Undo_EndBlock("Add Character Animation: Mellow", -1)
+end
+
+function Buttons.CharAnim_Intense()
+    local track, take = Tracks.GetActiveMIDITrack()
+    
+    if not track or not take then
+        reaper.ShowMessageBox("No active MIDI editor or track!", "Error", 0)
+        return
+    end
+    
+    local trackName = Tracks.GetTrackName(track)
+    
+    if not Tracks.IsTrackInGroup(trackName, "GUITARS") then
+        reaper.ShowMessageBox("Character animations only work on GUITARS tracks!\n(PART BASS, PART GUITAR, PART RHYTHM)", "Error", 0)
+        return
+    end
+    
+    reaper.Undo_BeginBlock()
+    MIDIFunctions.AddTextEvent(track, "[intense]")
+    reaper.Undo_EndBlock("Add Character Animation: Intense", -1)
+end
+
+function Buttons.CharAnim_PlaySolo()
+    local track, take = Tracks.GetActiveMIDITrack()
+    
+    if not track or not take then
+        reaper.ShowMessageBox("No active MIDI editor or track!", "Error", 0)
+        return
+    end
+    
+    local trackName = Tracks.GetTrackName(track)
+    
+    if not Tracks.IsTrackInGroup(trackName, "GUITARS") then
+        reaper.ShowMessageBox("Character animations only work on GUITARS tracks!\n(PART BASS, PART GUITAR, PART RHYTHM)", "Error", 0)
+        return
+    end
+    
+    reaper.Undo_BeginBlock()
+    MIDIFunctions.AddTextEvent(track, "[play_solo]")
+    reaper.Undo_EndBlock("Add Character Animation: Play Solo", -1)
+end
+
 return Buttons
