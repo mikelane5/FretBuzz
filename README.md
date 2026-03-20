@@ -1,8 +1,8 @@
-## **Fretbuzz 1.1**
+## **Fretbuzz 1.02**
 
 Fretbuzz adds MIDI notes and text events to PART GUITAR and BASS tracks in Reaper. All notes and text events are placed at the current playhead position.
 
-<img width="764" height="692" alt="Fretbuzz" src="https://github.com/user-attachments/assets/6e0e7a08-ce29-4e24-87b0-0a2fd19a1034" />
+<img width="765" height="840" alt="Fretbuzz13" src="https://github.com/user-attachments/assets/dbc10504-d2d7-4dc9-86b6-026472ebcd0e" />
 
 ## **Requirements**  
 The simplest way to get scripts working in Reaper is to follow the Milohax Reaper setup guide here: https://guides.milohax.org/en/charting/reaper/. This guide includes installing the SWS Extensions and includes the other files that you need.
@@ -45,6 +45,11 @@ The Strum map buttons are for the PART BASS track only. They place text messages
 These buttons add text events for character animation, and can be used to refinne the initial character animation text events that are placed by CAT (Create animation events button).
 
 <img width="765" height="69" alt="Character Animations" src="https://github.com/user-attachments/assets/1dc85dce-2bf7-42e5-b992-81f308907bd0" />
+
+## **YARG Range Shift Text Events** ##
+Range Shifts in YARG give the player warning of hand position changes during gameplay. They only apply to Medium and Easy guitar and bass tracks. Colored buttons reflect each hand shift position and create text events at the cursor position in the MIDI. 
+
+<img width="765" height="136" alt="YARG Range Shift Text Events" src="https://github.com/user-attachments/assets/02e796f1-80bf-4675-ad47-a1e403c3aed1" />
 
 ## Installation
 **Note**: This app reqiures a modern version of Reaper to run. 
