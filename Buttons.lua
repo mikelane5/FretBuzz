@@ -157,46 +157,6 @@ end
 
 -- Copy/Paste Button Functions
 
--- Place COPY_START timeline marker at cursor
-function Buttons.PlaceStartMarker()
-    local CP = GetCopyPaste()
-    
-    -- Check if START already exists
-    local startPos = CP.FindMarkers()
-    if startPos then
-        reaper.ShowMessageBox("COPY_START marker already exists! Use Clear Markers first.", "Error", 0)
-        return
-    end
-    
-    -- Get cursor position and add marker
-    local cursorPos = reaper.GetCursorPosition()
-    
-    reaper.Undo_BeginBlock()
-    reaper.AddProjectMarker(0, false, cursorPos, 0, "COPY_START", -1)
-    reaper.UpdateArrange()
-    reaper.Undo_EndBlock("Place COPY_START Marker", -1)
-end
-
--- Place COPY_END timeline marker at cursor
-function Buttons.PlaceEndMarker()
-    local CP = GetCopyPaste()
-    
-    -- Check if END already exists
-    local _, endPos = CP.FindMarkers()
-    if endPos then
-        reaper.ShowMessageBox("COPY_END marker already exists! Use Clear Markers first.", "Error", 0)
-        return
-    end
-    
-    -- Get cursor position and add marker
-    local cursorPos = reaper.GetCursorPosition()
-    
-    reaper.Undo_BeginBlock()
-    reaper.AddProjectMarker(0, false, cursorPos, 0, "COPY_END", -1)
-    reaper.UpdateArrange()
-    reaper.Undo_EndBlock("Place COPY_END Marker", -1)
-end
-
 -- Copy marked region
 function Buttons.CopyMarkedRegion()
     local track, take = Tracks.GetActiveMIDITrack()
@@ -206,10 +166,8 @@ function Buttons.CopyMarkedRegion()
         return
     end
     
-    -- Get track name
     local trackName = Tracks.GetTrackName(track)
     
-    -- Check if track is in GUITARS group
     if not Tracks.IsTrackInGroup(trackName, "GUITARS") then
         reaper.ShowMessageBox("Copy only works on GUITARS tracks!\n(PART BASS, PART GUITAR, PART RHYTHM)", "Error", 0)
         return
@@ -239,13 +197,6 @@ function Buttons.PasteAtCursor()
     end
     
     GetCopyPaste().PasteAtCursor(take)
-end
-
--- Clear all markers
-function Buttons.ClearMarkers()
-    reaper.Undo_BeginBlock()
-    GetCopyPaste().ClearMarkers()
-    reaper.Undo_EndBlock("Clear Markers", -1)
 end
 
 -- Character Animation Button Functions
